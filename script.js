@@ -38,6 +38,26 @@ function convertRoman() {
 
 // Roman to Arabic
 
+const romanInput = document.getElementById("romanInput");
+const romanButton = document.getElementById("romanButton");
+const resultArabic = document.getElementById("resultArabic");
 
+romanButton.addEventListener("click", convertArabic);
+
+function convertArabic() {
+    let arabicNumber = 0;
+    resultArabic.innerHTML = "";
+    romanValue = romanInput.value.toUpperCase().split("");
+
+    for (let i = 0; i < romanValue.length; i++) {
+        for (let j in RomanNumerals) {
+            if (romanValue[i] === j){
+                arabicNumber += parseInt(RomanNumerals[j])
+            }
+        }
+    }
+    console.log(arabicNumber);
+    resultArabic.innerHTML = arabicNumber;
+}
 
 
