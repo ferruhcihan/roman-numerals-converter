@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    .container{
+        display: flex;
+        flex-direction: column;
+        .upbox {
+            display: flex;
+            flex-direction: row;
+        }
+        .downbox {
+            display: flex;
+            flex-direction: row;
+        }
+        .section {
+            width: 50vw;
+            height: 50vh;
+            background-color: aquamarine;
+            border: 2px solid brown;
+        }
+    }
+}
